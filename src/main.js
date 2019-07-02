@@ -12,11 +12,21 @@ $(document).ready(function () {
     $('.output').show();
     $('#form').hide();
     pet.setLevel();
+
+    $('#play').click(function () {
+      pet.play();
+    });
+
+    $('#feed').click(function () {
+      pet.feed();
+    });
+
     $('button').click(function () {
       clearTimeout(sleepy);
       sleepy = setTimeout(function () {
-          pet.sleep();
-      }, 10000);
+            pet.sleep();
+          }, 10000);
     });
+
   });
 });

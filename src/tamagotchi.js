@@ -1,3 +1,4 @@
+import $ from 'jquery';
 export class Tamagotchi {
 
   constructor(name) {
@@ -12,6 +13,9 @@ export class Tamagotchi {
     setInterval(() => {
       this.foodLevel--;
       this.happyLevel--;
+      $('#fed').text(this.foodLevel);
+      $('#happiness').text(this.happyLevel);
+      $('#energy').text(this.energyLevel);
     }, 1000);
   }
 
@@ -53,11 +57,14 @@ export class Tamagotchi {
   }
 
   sleep() {
-    console.log("I am sleeping");
-    setInterval(() => {
-      this.energyLevel += 10;
-    }, 1000);
+    let x = setInterval(() => {
+      if (this.energyLevel <= 95) {
+        this.energyLevel += 5;
+      } else {
+        clearInterval(x);
+      }
 
+    }, 1000);
   }
 
   play() {

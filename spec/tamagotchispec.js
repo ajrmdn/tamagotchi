@@ -69,7 +69,7 @@ describe('Tamagotchi', function () {
   it('should restore 10 energy per second while sleeping', function () {
     snarly.energyLevel = 50;
     snarly.sleep();
-    jasmine.clock().tick(5000);
+    jasmine.clock().tick(10000);
     expect(snarly.energyLevel).toEqual(100);
  });
 
