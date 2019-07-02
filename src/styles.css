@@ -1,3 +1,6 @@
-body {
-  background-color: rgb(182, 228, 238);
-};
+.game {
+  display: none;
+}
+.output {
+  display: none;
+}

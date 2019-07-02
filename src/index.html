@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Weekday Calculator</title>
-  </head>
-  <body>
-    <form id="form">
-      <label for="year">Enter the year:</label>
-      <input id="year" type="number">
-      <label for="month">Enter the month:</label>
-      <input id="month" type="number">
-      <label for="day">Enter the day:</label>
-      <input id="day" type="number">
-      <button type="submit">Submit</button>
-    </form>
-    <ul id="solution"></ul>
-  </body>
+<head>
+  <title>Tamagotchi</title>
+</head>
+<body>
+  <div class="jumbotron">
+    <h1>Tamagotchi</h1>
+  </div>
+  <div class="characters">
+    <div class="card">
+      <div class="card-body">
+        <h3>Enter your Tamagotchi's name below</h3>
+      </div>
+    </div>
+    <div>
+      <form id='form'>
+        <label for="name"></label>
+        <input type="text" name="name" placeholder='Snarly'>
+        <button id='start' type="button" name="button">Play Game</button>
+      </form>
+    </div>
+    <div class="game">
+      <div class="row" style='width: 600px;'>
+        <div class="col-md-6">
+        <button type="button" name="feed">Feed Pet</button>
+      </div>
+      <div class="col-md-6">
+        <button type="button" name="play">Play</button>
+      </div>
+      </div>
+    </div>
+    <div class="output">
+      <h2>How is your pet doing?</h2><br><br>
+      <div class="stats">
+        <h2>Energy:<span id='energy'></span></h2>
+        <h2>Fed:<span id='fed'></span></h2>
+        <h2>Happiness:<span id='happiness'></span></h2>
+
+      </div>
+    </div>
+
+
+  </div>
+</body>
 </html>
